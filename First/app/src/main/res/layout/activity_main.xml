@@ -46,7 +46,8 @@
             android:id="@+id/cattoImageView"
             android:layout_width="match_parent"
             android:layout_height="67dp"
-            app:srcCompat="@drawable/cat_1583522" />
+            app:srcCompat="@drawable/cat_1583522"
+            android:tint="?attr/colorSecondaryVariant"/>
 
         <EditText
             android:id="@+id/firstArgumentInputText"

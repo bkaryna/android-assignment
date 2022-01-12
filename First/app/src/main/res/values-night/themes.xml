@@ -9,8 +9,25 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="backgroundColor">#3F3351</item>>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomStyle" parent="Theme.First">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#951556</item>
+        <item name="colorPrimaryVariant">#1F1D36</item>
+        <item name="colorOnPrimary">#FFEDDA</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FFD717</item>
+        <item name="colorSecondaryVariant">#E6AA13</item>
+        <item name="colorOnSecondary">#FFEDDA</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">#1F1D36</item>
+        <item name="android:textColor">#FFEDDA</item>
+
     </style>
 </resources>
