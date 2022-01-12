@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,8 +36,11 @@ public class MainActivity extends AppCompatActivity {
         revertInput = findViewById(R.id.textToRevertInputText);
         firstArgument = findViewById(R.id.firstArgumentInputText);
         secondArgument = findViewById(R.id.secondArgumentInputText);
-        operationType = findViewById(R.id.operationTextView);
-        operationResult = findViewById(R.id.operationResultTextView);
+        operationType = findViewById(R.id.operationResultTextView);
+        operationResult = findViewById(R.id.resultResultTextView);
+
+        Chronometer chronometer = findViewById(R.id.chronometer);
+        chronometer.start();
 
     }
 
@@ -49,9 +53,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void runOperation(View view) {
+        if (firstArgument.getText().toString().trim().isEmpty())
+            firstArgument.setText("0");
+        if (secondArgument.getText().toString().trim().isEmpty())
+            secondArgument.setText("0");
+
         Intent intent = new Intent()
-                .putExtra("first", firstArgument.getText().toString())
-                .putExtra("second", secondArgument.getText().toString())
+                .putExtra("first", firstArgument.getText().toString().trim())
+                .putExtra("second", secondArgument.getText().toString().trim())
                 .setAction("First")
                 .setType("text/plain");
         launcher.launch(intent);

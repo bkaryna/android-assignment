@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         String first = intent.getStringExtra("first");
         String second = intent.getStringExtra("second");
 
-        if(first == null && second == null) {
+        if(first == null || second == null) {
             showToast("No arguments");
             finish();
             return;
